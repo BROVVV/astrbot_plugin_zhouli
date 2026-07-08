@@ -1,0 +1,80 @@
+{
+  "default_enabled": {
+    "description": "新会话是否默认开启周礼模式",
+    "type": "bool",
+    "default": false,
+    "hint": "关闭时，只有执行 /zhouli on 或自然触发词后才会进入周礼模式。"
+  },
+  "require_mention_in_group": {
+    "description": "群聊自然触发是否需要 @ 机器人",
+    "type": "bool",
+    "default": true,
+    "hint": "命令触发不受影响。开启后，群里只有 @/唤醒机器人后才响应自然触发词，减少误触。"
+  },
+  "ask_triggers": {
+    "description": "单次问礼触发词",
+    "type": "list",
+    "default": [
+      "问礼：",
+      "问礼:",
+      "合乎周礼地说：",
+      "把这句话变得合乎周礼："
+    ],
+    "hint": "自然语言触发词，只做一次转换，不会开启长期模式。"
+  },
+  "plain_triggers": {
+    "description": "单次释礼触发词",
+    "type": "list",
+    "default": [
+      "释礼：",
+      "释礼:",
+      "翻回人话：",
+      "解释这段周礼体："
+    ],
+    "hint": "把周礼体翻回直接的人话。"
+  },
+  "mode_on_triggers": {
+    "description": "开启周礼模式触发词",
+    "type": "list",
+    "default": [
+      "进入周礼模式",
+      "开启周礼模式",
+      "以后合乎周礼地说话",
+      "合乎周礼回答"
+    ],
+    "hint": "这些短语会开启当前会话的长期周礼风格。"
+  },
+  "mode_off_triggers": {
+    "description": "关闭周礼模式触发词",
+    "type": "list",
+    "default": [
+      "退出周礼模式",
+      "关闭周礼模式",
+      "退朝"
+    ],
+    "hint": "这些短语会关闭当前会话的长期周礼风格。"
+  },
+  "default_length": {
+    "description": "默认篇幅",
+    "type": "string",
+    "options": [
+      "小礼",
+      "成礼",
+      "大礼"
+    ],
+    "default": "成礼",
+    "hint": "控制输出长短。"
+  },
+  "max_input_chars": {
+    "description": "单次转换最大输入字数",
+    "type": "int",
+    "default": 800,
+    "hint": "超过此长度会拒绝转换，避免上下文过长。"
+  },
+  "provider_id": {
+    "description": "指定 LLM provider ID",
+    "type": "string",
+    "default": "",
+    "hint": "留空则使用当前会话正在使用的 AstrBot LLM provider。"
+  }
+}
