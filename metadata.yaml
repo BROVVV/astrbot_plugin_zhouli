@@ -1,0 +1,24 @@
+name: astrbot_plugin_zhouli
+desc: 让 AstrBot 支持合乎周礼的回复模式，并提供问礼/释礼文本转换命令。
+help: |
+  /zhouli on - 开启当前会话周礼模式
+  /zhouli off - 关闭当前会话周礼模式
+  /zhouli status - 查看当前会话状态
+  /zhouli ask <文本> - 把文本改写成周礼体
+  /zhouli plain <文本> - 把周礼体翻回人话
+  /问礼 <文本> - 把文本改写成周礼体
+  /释礼 <文本> - 把周礼体翻回人话
+version: v0.1.0
+author: brov
+repo: "https://github.com/BROVVV/astrbot_plugin_zhouli"
+display_name: 合乎周礼
+short_desc: 问礼、释礼与周礼体人格回复插件。
+astrbot_version: ">=4.5.7,<5"
+support_platforms:
+  - aiocqhttp
+  - telegram
+  - weixin_official_account
+  - lark
+  - discord
+  - slack
+  - webchat
